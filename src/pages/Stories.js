@@ -136,7 +136,7 @@ const Stories = () => {
 
             <Container>
                 <Row>
-                    <Col md={4}>
+                    <Col md={4} className='mt-3'>
                         <p className='text-xl font-semibold'>Create Story</p>
                         <hr />
 
@@ -163,10 +163,11 @@ const Stories = () => {
 
 
 
-                    <Col md={8}>
+                    <Col md={8} className='mt-3'>
                         <p className='text-xl font-semibold'>List of Stories</p>
                         <hr />
 
+                        {/* Search bar */}
                         <div className='row mb-3 mt-4'>
 
                             <div className='col-md-6'> <i className='fa fa-sync btn' title='Reset' onClick={() => { fetchStories() }}></i> </div>
@@ -195,7 +196,7 @@ const Stories = () => {
 
                         </div>
 
-                        <div className='mt-4'>
+                        <div className='mt-2'>
                             <Row>
 
                                 {
@@ -222,8 +223,8 @@ const Stories = () => {
                                                         {
                                                             allStories.map((dd, index) => {
                                                                 return (
-                                                                    <Col className='mt-2' md={6} key={index}>
-                                                                        <Card className='shadow-sm border-0 rounded-lg'>
+                                                                    <Col className='mt-3' md={6} key={index}>
+                                                                        <Card className='shadow-sm rounded-lg border-y-0 border-default_orange border-b-0 border-x-2'>
                                                                             <Card.Body>
                                                                                 <div className='float-right clear-both flex gap-3'>
                                                                                     <Link to="#" title='Edit Story' onClick={trigger.bind(this, index)}><PencilAltIcon className='w-6 h-6' /></Link>
